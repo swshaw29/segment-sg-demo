@@ -10,6 +10,6 @@
                 n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
                 var a = document.getElementsByTagName("script")[0]; a.parentNode.insertBefore(n, a)
             };
-            analytics.load("WRITE_KEY");
+            analytics.load("fV0jXXBIQWagS8wk9ydYBqulokPyRtu0");
         }
 }();

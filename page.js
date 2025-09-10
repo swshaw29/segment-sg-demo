@@ -1,17 +1,13 @@
-document.getElementById('subscribe').addEventListener('click', () => {
-    const email = document.getElementById('email').value || 'test@example.com';
-
-    // Just track the event with email property
-    analytics.track('Subscribed to Newsletter', { email });
-
-    alert(`Tracked: Subscribed to Newsletter (${email})`);
+document.getElementById("subscribe").addEventListener("click", function() {
+    const email = document.getElementById("email").value;
+    analytics.identify(email, { email: email });
+    analytics.track("Subscribed to Newsletter", { email: email });
+    alert("Subscription event sent to Segment!");
 });
 
-document.getElementById('signup').addEventListener('click', () => {
-    const email = document.getElementById('email').value || 'test@example.com';
-
-    // Track signup event with email property
-    analytics.track('User Signed Up', { email });
-
-    alert(`Tracked: User Signed Up (${email})`);
+document.getElementById("signup").addEventListener("click", function() {
+    const email = document.getElementById("email").value;
+    analytics.identify(email, { email: email });
+    analytics.track("Signed Up", { email: email });
+    alert("Signup event sent to Segment!");
 });

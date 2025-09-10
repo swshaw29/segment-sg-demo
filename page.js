@@ -4,7 +4,6 @@ document.getElementById("subscribe").addEventListener("click", function() {
     analytics.track("Subscribed to Newsletter", { email: email });
     alert("Subscription event sent to Segment!");
 });
-
 document.getElementById("signup").addEventListener("click", function() {
     const email = document.getElementById("email").value;
     analytics.identify(email, { email: email });
